@@ -1,0 +1,28 @@
+body {
+    background-color: #eeecdf;
+}
+
+.navbar-default {
+    background-color: #2a7e22;
+}
+
+.container {
+    background-color: #fff;
+}
+
+.navbar-default .container {
+    background: transparent;
+}
+
+.navbar-default .navbar-brand {
+    color: #f6451e;
+}
+
+.main {
+	padding-top: 50px;
+}
+
+.searchBgColor {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}

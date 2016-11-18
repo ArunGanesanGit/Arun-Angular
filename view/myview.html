@@ -1,0 +1,55 @@
+<h3>Input Form</h3>
+<hr>
+<div class="panel default searchBgColor">
+	<div class="panel-body">
+		<div class="col-lg-6">
+			<label>Name:</label>
+			<div class="form-group form-group-sm">
+				<input type="text" class="form-control" 
+					ng-model="$myCtrl.yourName" ng-pattern="/^[a-zA-Z0-9 ]*$/" 
+					validate-pattern validate-input capitalize 
+					placeholder="Enter a name here">
+			</div>
+
+			<label>My Favourite car:</label>
+			<input type="checkbox" ng-model="mySel">
+
+			<label>Select a car:</label>
+			<select ng-model="car">
+			  <option>Volvo</option>
+			  <option ng-selected="mySel">BMW</option>
+			  <option>Ford</option>
+			</select>
+
+				
+
+			<test-template name="Main comp Testing !!!!!!!" ng-show="true" class="ng-hide"></test-template>
+		</div>
+
+		<div class="col-lg-6">
+			<label>Name:</label>
+			<p>{{$myCtrl.yourName}}</p>
+
+			<tabs>
+				<ul>
+					<li ng-repeat="name in myCtrl.names | filter:$myCtrl.yourName">{{name}}</li>
+				</ul>
+			</tabs>	
+
+			<label>My favourite car selected:</label>
+			<p>{{mySel}}</p>
+
+			<label>Selected Car:</label>
+			<p>{{car}}</p>
+
+
+			Hello {{myCtrl.name}}! 
+
+			<tabs><ul>
+			<li ng-repeat="name in myCtrl.names | filter:$myCtrl.yourName">{{name}}</li>
+			</ul>
+			</tabs>		
+			<input type='button' value="Review & Submit" class="btn btn-primary col-sm-offset-3" ng-click="myCtrl.onSubmit()">
+		</div>
+	</div>
+</div>
